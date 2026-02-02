@@ -1,0 +1,185 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #000000;
+  --card-bg: #09090b;
+  /* Zinc 950 */
+  --card: #09090b;
+  --card-hover: #18181b;
+  --border: #27272a;
+  /* Zinc 800 */
+  --border-light: #3f3f46;
+
+  --primary: #ffffff;
+  --secondary: #a1a1aa;
+  /* Zinc 400 */
+  --accent: #ffffff;
+
+  --gain: #22c55e;
+  /* Green 500 */
+  --loss: #ef4444;
+  /* Red 500 */
+
+  --text: #e4e4e7;
+  /* Zinc 200 */
+  --muted: #71717a;
+  /* Zinc 500 */
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+/* Precise Borders */
+.border-grid {
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+}
+
+/* Clean Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3f3f46;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #52525b;
+}
+
+/* Custom scrollbar for sections */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Section scroll container */
+.section-scroll {
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.1) transparent;
+}
+
+/* Utilities */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Tech border effect */
+.tech-border {
+  position: relative;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+}
+
+.tech-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  pointer-events: none;
+}
+
+/* Neon text shadow */
+.text-shadow-neon {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Shimmer loading animation */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.03) 0%,
+    rgba(255, 255, 255, 0.08) 50%,
+    rgba(255, 255, 255, 0.03) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+/* Pulse glow */
+@keyframes glow-pulse {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+/* Row hover effect */
+.row-hover {
+  transition: all 0.15s ease;
+}
+
+.row-hover:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Selection */
+::selection {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+/* Hide scrollbar but keep functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Focus states */
+button:focus-visible,
+a:focus-visible {
+  outline: 1px solid rgba(255, 255, 255, 0.3);
+  outline-offset: 2px;
+}

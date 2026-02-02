@@ -1,0 +1,45 @@
+# --- Dependencies ---
+node_modules/
+.pnpm-store/
+
+# --- Next.js Build Output ---
+.next/
+out/
+build/
+dist/
+
+# --- Environment Variables (CRITICAL for Security) ---
+# Ignore actual secrets, but keep .env.example
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env.local
+
+# --- Logs ---
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- Editor & Tool Configs ---
+.vscode/
+.idea/
+.claude/
+*.swp
+*.swo
+
+# --- Operating System Files ---
+.DS_Store
+Thumbs.db
+
+# --- Project Specific Large Files/Archives ---
+# It is bad practice to push large archives like RAR/ZIP to Git
+mournbit.rar
+
+# --- Vercel (If deploying to Vercel) ---
+.vercel/
+
+# --- Windows System File Artifacts ---
+nul
