@@ -84,7 +84,7 @@ DISCORD_GUILD_ID=your_guild_id_here
 ## ⚡ Usage
 
 ### Running the Web App
-Start the Next.js development server:
+Start the Next.js development server: 
 ```bash
 npm run dev
 ```
